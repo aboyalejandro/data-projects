@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NFT Analysis</title>
+    <link rel="stylesheet" href="./static/css/main.css"> 
+</head>
+<body>
+
+    <h1> &#128293 Welcome to Categories comparator! &#128293 </h1>
+    <p class="subtitle">Understand what makes a Category different from another.</p>
+    <ul>
+      <li><a href="/overview"> Click here to have a quick overview of a category and chain. </a></li>
+      <li><a href="/comparisons-chains"> Click here to compare 2 different chains based on their features. </a></li>
+      <li><a href="/recommendations"> Click here to try some random tests and predict your new nfts. </a></li>
+      </ul>
+    <br>
+    <form method = "POST">
+        <!--<label> Chain</label>
+        <input type="text" name="blockchain" id="chain">
+        <br>-->
+
+        <fieldset>
+          <legend>Select the first category to compare:</legend>
+      
+          <div>
+            <input type="radio" id="art" name="category1" value="Art"
+                   checked>
+            <label for="art">Art</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="new" name="category1" value="New">
+            <label for="new">New</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="collect" name="category1" value="Collectibles">
+            <label for="collect">Collectibles</label>
+          </div>
+
+          <div>
+              <input type="radio" id="music" name="category1" value="Music">
+              <label for="music">Music</label>
+            </div>
+
+            <div>
+              <input type="radio" id="sports" name="category1" value="Sports"
+                     checked>
+              <label for="sports">Sports</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="domains" name="category1" value="Domain Names">
+              <label for="domains">Domain Names</label>
+            </div>
+        
+            <div>
+              <input type="radio" id="worlds" name="category1" value="Virtual Worlds">
+              <label for="worlds">Virtual Worlds</label>
+            </div>
+
+            <div>
+                <input type="radio" id="cards" name="category1" value="Trading Cards">
+                <label for="cards">Trading Cards</label>
+              </div>
+
+            <div>
+                <input type="radio" id="utility" name="category1" value="Utility">
+                <label for="utility">Utility</label>
+            </div>
+
+            <div>
+                <input type="radio" id="photo" name="category1" value="Photography">
+                <label for="photo">Photography</label>
+            </div>
+
+      </fieldset>
+      <br>
+      
+      <fieldset>
+        <legend>Select the second category to compare:</legend>
+    
+        <div>
+          <input type="radio" id="art" name="category2" value="Art"
+                 checked>
+          <label for="art">Art</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="new" name="category2" value="New">
+          <label for="new">New</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="collect" name="category2" value="Collectibles">
+          <label for="collect">Collectibles</label>
+        </div>
+
+        <div>
+            <input type="radio" id="music" name="category2" value="Music">
+            <label for="music">Music</label>
+          </div>
+
+          <div>
+            <input type="radio" id="sports" name="category2" value="Sports"
+                   checked>
+            <label for="sports">Sports</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="domains" name="category2" value="Domain Names">
+            <label for="domains">Domain Names</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="worlds" name="category2" value="Virtual Worlds">
+            <label for="worlds">Virtual Worlds</label>
+          </div>
+
+          <div>
+              <input type="radio" id="cards" name="category2" value="Trading Cards">
+              <label for="cards">Trading Cards</label>
+            </div>
+
+          <div>
+              <input type="radio" id="utility" name="category2" value="Utility">
+              <label for="utility">Utility</label>
+          </div>
+
+          <div>
+              <input type="radio" id="photo" name="category2" value="Photography">
+              <label for="photo">Photography</label>
+          </div>
+
+    </fieldset>
+    <br>
+
+        <!--<label> Category</label>
+        <input type="text" name="category" id="category">
+        <br>-->
+        
+        <input type="submit" value="Run Comparison">
+
+    </form>
+
+    {% if category1 and category2 %}
+      {% if category1 == category2 %}
+          <h3> Busted&#10071 You can't compare the same category. </h3> 
+          <h3>Waiting for your response...</h3>
+        {% else %}
+          <h3> You've chosen to compare {{category1}} and {{category2}}!</h3> 
+            {% if comparison %}
+              <p>Your average differentiation rate is {{rate}}%. {{conclusions}} <a href="/overview">Click here to check the top 5 NFTs about these categories.</a> </p>
+            {%- for row in comparison.items()|batch(3) %}
+                {%- for key,value in row %}
+                <p><strong>{{ key }}</strong> -> {{ value }}</p>     
+                {%- endfor %}
+            {%- endfor %}
+            {% else %}
+          <h3>Waiting for your response...</h3>
+      {% endif %}
+      {% endif %}
+    {% endif %}
+
+    
+    
+</body>
+
+</html>
