@@ -1,5 +1,4 @@
-
-# Modeling Facebook and Google Ads data with Fiventran, Snowflake and dbt
+# Modeling Facebook and Google Ads data with Fivetran, Snowflake and dbt
 Get data at very high level of details: for Facebook Ads, get everything to see at an ad creative level. For Google Ads, get everything at search keyword level.
 
 # Introduction & Goals
