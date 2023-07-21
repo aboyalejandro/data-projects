@@ -23,7 +23,7 @@ Scrape selected countries weather and send it to PostgreSQL and GCP with an easy
 
 ![alt text](images/tools.png)
 
-# Mage
+# mage
 - Setup data loader.
 - Setup data transformer.
 - Setup data exporter to PostgreSQL and GCP.
@@ -32,19 +32,19 @@ You can see all the pytho code in /mage
 
 ![alt text](images/mage_tree.png)
 
-# PostgreSQL
+# postgreSQL
 
 Data is added to PostgreSQL destination.
 
 ![alt text](images/postgresql.png)
 
-# Google Cloud Storage
+# gcp
 
 After creating service accounts and setting up the buckets, the parquets are added to Google Cloud Storage.
 
 ![alt text](images/gcp.png)
 
-# Data Studio
+# data_studio
 
 Finally, data is reported in data studio.
 
