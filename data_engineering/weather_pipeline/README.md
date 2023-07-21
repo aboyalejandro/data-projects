@@ -28,6 +28,8 @@ Scrape selected countries weather and send it to PostgreSQL and GCP with an easy
 - Setup data transformer.
 - Setup data exporter to PostgreSQL and GCP.
 
+You can see all the pytho code in /mage
+
 ![alt text](images/mage_tree.png)
 
 # PostgreSQL

@@ -1,12 +1,15 @@
 # data-projects
 
-Some projects using:
-- SQL
-- APIs Scraping-consumption
-- Python + SQL 
-  - Data cleaning
-  - Transformations
-- Hyphotesis Testing
+You will see different sections:
+
+- Data Engineering
+  - Paid Ads Models
+  - Weather Pipeline
 - Machine Learning
-  - Logistic Regression, Linear Regression
-  - XGBoost
+  - Sales prediction
+  - NFT performance predictor (Flask)
+- Scraping
+  - Bootcamps scraping and SQL storage
+  - Scraping daily energy prices
+- Other Projects
+  - Scape Room Project
