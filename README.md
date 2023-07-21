@@ -1,4 +1,4 @@
-# data-projects
+# Data projects
 
 You will see different sections:
 
