@@ -14,16 +14,7 @@ Get data at very high level of details: for Facebook Ads, get everything to see 
   - [dbdiagram.io](#dbdiagram.io)
   - [Snowflake](#snowflake)
   - [dbt & Snowflake](#dbt_snowflake)
-- [Pipelines](#pipelines)
-  - [Stream Processing](#stream-processing)
-    - [Storing Data Stream](#storing-data-stream)
-    - [Processing Data Stream](#processing-data-stream)
-  - [Batch Processing](#batch-processing)
-  - [Visualizations](#visualizations)
-- [Conclusion](#conclusion)
 - [Follow Me On](#follow-me-on)
-- [Appendix](#appendix)
-
 
 # Used Tools
 - Fivetran for data ingestion
