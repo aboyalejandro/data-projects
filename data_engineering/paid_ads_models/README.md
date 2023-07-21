@@ -13,7 +13,7 @@ Get data at very high level of details: for Facebook Ads, get everything to see 
   - [Fivetran](#fivetran)
   - [dbdiagram.io](#dbdiagram)
   - [Snowflake](#snowflake)
-  - [dbt & Snowflake](#dbt_snowflake)
+  - [dbt & Snowflake](#dbt_and_nowflake)
 - [Follow Me On](#follow-me-on)
 
 # Used Tools
@@ -31,14 +31,14 @@ Get data at very high level of details: for Facebook Ads, get everything to see 
 
 # dbdiagram
 
-First, after contemplating Fivetran ERDs, I've designed the star models for both cases.
+First, after contemplating Fivetran ERDs, I've designed the star models for both cases in dbdiagram.io
 
 ### Google Ads:
 ![alt text](images/google_ads_star_model.png)
 ### Facebook Ads:
 ![alt text](images/facebook_ads_star_model.png)
 
-# dbt & Snowflake
+# dbt and Snowflake
 
 Finally, after getting the diagram done, I've started modeling all the tables to get the final results. The sources for this raw data are listed in /sources folder and the /models are as shown below:
 
