@@ -1,0 +1,1 @@
+{"name": "str", "country": "str", "latitude": "float64", "longitud": "float64", "timezone": "str", "local_time": "str", "temperature": "float64", "is_day": "int64", "condition": "str", "wind_speed": "float64", "pressure": "float64", "humidity": "int64", "uv": "float64", "date": "str", "date_inserted": "str"}
