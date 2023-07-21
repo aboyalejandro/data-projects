@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NFT Analysis</title>
+    <link rel="stylesheet" href="./static/css/main.css"> 
+</head>
+<body>
+
+    <h1> &#128279  Welcome to Chains comparator! &#128279</h1>
+    <p class="subtitle">Understand what makes a Chain different from another.</p>
+
+    <ul>
+      <li><a href="/overview"> Click here to have a quick overview of a category and chain. </a></li>
+      <li><a href="/comparisons-categories"> Click here to compare 2 different categories based on their features. </a></li>
+      <li><a href="/recommendations"> Click here to try some random tests and predict your new nfts. </a></li>
+      </ul>
+    <br>
+    <form method = "POST">
+        <!--<label> Chain</label>
+        <input type="text" name="blockchain" id="chain">
+        <br>-->
+
+        <fieldset>
+          <legend>Select the first chain to compare:</legend>
+      
+          <div>
+            <input type="radio" id="eth" name="chain1" value="Ethereum"
+                   checked>
+            <label for="eth">Ethereum</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="sol" name="chain1" value="Solana">
+            <label for="sol">Solana</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="pol" name="chain1" value="Polygon">
+            <label for="pol">Polygon</label>
+          </div>
+
+          <div>
+              <input type="radio" id="klay" name="chain1" value="Klaytn">
+              <label for="klay">Klaytn</label>
+            </div>
+      </fieldset>
+      <br>
+      
+      <fieldset>
+        <legend>Select the second chain to compare:</legend>
+    
+        <div>
+          <input type="radio" id="eth" name="chain2" value="Ethereum"
+                 checked>
+          <label for="eth">Ethereum</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="sol" name="chain2" value="Solana">
+          <label for="sol">Solana</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="pol" name="chain2" value="Polygon">
+          <label for="pol">Polygon</label>
+        </div>
+
+        <div>
+            <input type="radio" id="klay" name="chain2" value="Klaytn">
+            <label for="klay">Klaytn</label>
+          </div>
+    </fieldset>
+    <br>
+
+        <!--<label> Category</label>
+        <input type="text" name="category" id="category">
+        <br>-->
+        
+        <input type="submit" value="Run Comparison">
+
+    </form>
+
+    {% if chain1 and chain2 %}
+      {% if chain1 == chain2 %}
+          <h3> Busted&#10071 You can't compare the same chain. </h3> 
+          <h3>Waiting for your response...</h3>
+        {% else %}
+          <h3> You've chosen to compare {{chain1}} and {{chain2}}!</h3> 
+                {% if comparison %}
+                    <p>Your average differentiation rate is {{rate}}%. {{conclusions}} <a href="/overview">Click here to check the top 5 NFTs about these chains.</a> </p>
+                {%- for row in comparison.items()|batch(3) %}
+                    {%- for key,value in row %}
+                    <p><strong>{{ key }}</strong> -> {{ value }}</p>     
+                    {%- endfor %}
+                {%- endfor %}
+                {% else %}
+                <h3>Waiting for your response...</h3>
+          {% endif %}
+      {% endif %}    
+    {% endif %}
+    
+</body>
+
+</html>
