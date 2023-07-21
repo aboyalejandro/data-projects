@@ -34,13 +34,13 @@ You can see all the python code in /dags
 
 # postgreSQL
 
-Data is added to PostgreSQL destination.
+With airflows conenction, data is added to PostgreSQL destination.
 
 ![alt text](images/postgresql.png)
 
 # s3
 
-After creating service accounts and setting up the bucket, the parquets are added to Amazon S3.
+After creating airflow connections and setting up the bucket, the parquets are added to Amazon S3.
 
 ![alt text](images/folders.png)
 ![alt text](images/parquet.png)
