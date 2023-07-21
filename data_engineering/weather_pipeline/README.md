@@ -40,7 +40,7 @@ Data is added to PostgreSQL destination.
 
 # gcp
 
-After creating service accounts and setting up the buckets, the parquets are added to Google Cloud Storage.
+After creating service accounts and setting up the bucket, the parquets are added to Google Cloud Storage.
 
 ![alt text](images/gcp.png)
 
