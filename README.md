@@ -3,8 +3,9 @@
 You will see different sections:
 
 - Data Engineering
-  - Paid Ads Models
-  - Weather Pipeline
+  - Paid Ads Models (Fivetran, dbt, Snowflake)
+  - Weather Pipeline (Mage, PostgreSQL, GCP, Data Studio)
+  - Attribution Pipeline (Airflow, PostgreSQL, S3)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)
