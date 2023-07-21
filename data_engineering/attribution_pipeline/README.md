@@ -29,9 +29,9 @@ PiwikPRO became a good alternative for replacing Google Analytics. In this pipel
 
 You can see all the python code in /dags
 
-![alt text](images/dag_1png)
+![alt text](images/dag_1.png)
 
-![alt text](images/dag_2png)
+![alt text](images/dag_2.png)
 
 # postgreSQL
 
