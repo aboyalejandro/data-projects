@@ -18,10 +18,6 @@ with DAG(dag_id='piwik_pro',
          description='scraping piwik every day',
          schedule_interval='@daily',
          start_date=datetime(2023, 7, 21, hour=1, minute=00, second=00)) as dag: 
-
-        DATE = datetime.utcnow() - timedelta(days=1)
-        year = f'/year={str(DATE.strftime("%Y"))}/month={str(DATE.strftime("%m"))}' 
-        day =  f'/day={str(DATE.strftime("%d"))}/uploaded={str(datetime.utcnow().strftime("%Y%m%d%H%M%S"))}/'
         
         with TaskGroup(group_id='piwik_sessions') as piwik_sessions:
 
@@ -54,10 +50,8 @@ with DAG(dag_id='piwik_pro',
                 s3_key = f'sessions/{pd.Timestamp.now().strftime("%y%m%d%H%M%S")}.parquet',
                 data="{{ ti.xcom_pull('piwik_sessions.transform_piwik_sessions')}}"
             )
-
             
             load_piwik_sessions >> transform_piwik_sessions >> [report_to_csv,send_to_posgres,upload_to_s3]
-            
         
         with TaskGroup(group_id='piwik_events') as piwik_events:
              
@@ -93,7 +87,6 @@ with DAG(dag_id='piwik_pro',
             
             load_piwik_events >> transform_piwik_events >> [report_to_csv,send_to_posgres,upload_to_s3]
             
-
         with TaskGroup(group_id='piwik_analytics') as piwik_analytics:
             
             load_piwik_analytics = PythonOperator(task_id='load_piwik_analytics',

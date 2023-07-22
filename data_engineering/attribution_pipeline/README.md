@@ -26,6 +26,7 @@ PiwikPRO became a good alternative for replacing Google Analytics. In this pipel
 - Transform and clean output
 - Export to PostgreSQL and Amazon S3.
 - Run query in PostgreSQL to connect attribution data and export again.
+- Use decorators, operators and OOP.
 
 You can see all the python code in /dags
 

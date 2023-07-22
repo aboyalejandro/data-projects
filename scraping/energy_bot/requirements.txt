@@ -7,7 +7,7 @@ python-telegram-bot==13.9
 Sphinx
 requests
 github3.py==2.0.0
-httpx ~= 0.22.0
+httpx ~= 0.23.0
 tornado~=6.1
 cachetools~=5.0.0
 APScheduler~=3.9.1

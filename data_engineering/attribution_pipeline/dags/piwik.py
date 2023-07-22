@@ -15,7 +15,7 @@ def generate_analytics_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/auth/token"
+    url = "https://demosite.piwik.pro/auth/token"
     headers = {"Content-Type": "application/json"}
 
     data = {
@@ -32,7 +32,7 @@ def generate_analytics_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/api/analytics/v1/query/"
+    url = "https://demosite.piwik.pro/api/analytics/v1/query/"
 
     payload = json.dumps({
         "date_from": f'{yesterday_pd}',
@@ -72,81 +72,8 @@ def generate_analytics_payload():
             ]
         ],
         "filters": {
-            "operator": "and",
-            "conditions": [
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "referrer_url",
-                    "condition": {
-                    "operator": "not_matches",
-                    "value": "vinted|blablacar|indeed|offerup|eurofirms"
-                    }
-                }
-                ]
-            },
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "session_entry_url",
-                    "condition": {
-                    "operator": "not_matches",
-                    "value": "impact|becas|schol|rappi|wallapop|uber|vinted|cabify|n26|kleider|accenture|landing-jobs|rebellion|eurofirms|eMerge|valencia|volvero|thomsonreuters|djiiga|EY|femhack| scholarships|tgtg|nextbike|cajoo|spielfeld|bnext|veepee|rastreotech|emerge|banco_23"
-                    }
-                }
-                ]
-            },
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "campaign_content",
-                    "condition": {
-                    "operator": "not_matches",
-                    "value": "scholarships|partnerships"
-                    }
-                }
-                ]
-            },
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "location_country_name",
-                    "condition": {
-                    "operator": "neq",
-                    "value": "IE"
-                    }
-                }
-                ]
-            },
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "campaign_name",
-                    "condition": {
-                    "operator": "not_matches",
-                    "value": "impact|becas|schol|rappi|wallapop|uber|vinted|cabify|n26|kleider|accenture|landing-jobs|rebellion|eurofirms|eMerge|valencia|volvero|thomsonreuters|djiiga|volvero|talent-pool-club|bipi|cajoo|freelance|spielfeld|scholarship-dutchdigitaltalent|talentland|trivago|percentil|lionstep|offerup"
-                    }
-                }
-                ]
-            },
-            {
-                "operator": "or",
-                "conditions": [
-                {
-                    "column_id": "source",
-                    "condition": {
-                    "operator": "not_matches",
-                    "value": "vinted|blablacar|indeed|offerup|amazon|sweatcoin|Klaviyo"
-                    }
-                }
-                ]
-            }
-            ]
+        "operator": "and",
+        "conditions": []
         },
         "metric_filters": None
         })
@@ -165,7 +92,7 @@ def generate_events_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/auth/token"
+    url = "https://demosite.piwik.pro/auth/token"
     headers = {"Content-Type": "application/json"}
 
     data = {
@@ -182,7 +109,7 @@ def generate_events_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/api/analytics/v1/events/" #by default --> visitorId, event_id, timestamp
+    url = "https://demosite.piwik.pro/api/analytics/v1/events/" #by default --> visitorId, event_id, timestamp
 
     payload = json.dumps({
     "website_id": f'{PIWIK_WEBSITE_ID}',
@@ -220,7 +147,7 @@ def generate_sessions_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/auth/token"
+    url = "https://demosite.piwik.pro/auth/token"
     headers = {"Content-Type": "application/json"}
 
     data = {
@@ -237,7 +164,7 @@ def generate_sessions_payload():
     yesterday = today - timedelta(days=1)
     yesterday_pd = pd.to_datetime(yesterday).date().strftime('%Y-%m-%d')
 
-    url = "https://ironhack.piwik.pro/api/analytics/v1/sessions/" 
+    url = "https://demosite.piwik.pro/api/analytics/v1/sessions/" 
 
     payload = json.dumps({
     "website_id": f'{PIWIK_WEBSITE_ID}',
@@ -246,13 +173,13 @@ def generate_sessions_payload():
         "column_id": "visitor_session_number"
         },
         {
-        "column_id": "source_medium" #could apply channel definition logics here to have the "session"
+        "column_id": "source_medium" 
         },
         {
         "column_id": "campaign_name"
         },
         {
-        "column_id": "session_goals" #this should be an array specifying the goals (apps, financing, etc)
+        "column_id": "session_goals" 
         },
         {
         "column_id": "session_total_page_views"
