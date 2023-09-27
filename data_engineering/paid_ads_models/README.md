@@ -33,8 +33,10 @@ First, after contemplating Fivetran ERDs, I've designed the star models for both
 
 ### Google Ads:
 ![alt text](images/google_ads_star_model.png)
+Note: some column names might differ from the final dbt model.
 ### Facebook Ads:
 ![alt text](images/facebook_ads_star_model.png)
+Note: some column names might differ from the final dbt model.
 
 # dbt
 
@@ -44,8 +46,10 @@ The sources for this raw data are listed in /sources folder and the /models are 
 
 ### Google Ads:
 ![alt text](images/google_ads_dbt.png)
+Note: some column names might differ from the final dbt model.
 ### Facebook Ads:
 ![alt text](images/facebook_ads_dbt.png)
+Note: some column names might differ from the final dbt model.
 
 # Follow Me On
 Linkedin: https://www.linkedin.com/in/alejandro-aboy/ 
