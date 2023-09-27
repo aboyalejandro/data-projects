@@ -20,6 +20,7 @@ First, after contemplating Fivetran ERDs, I've designed the star models for both
 
 # snowflake
 Check .sql files to see the step by step S3 integration, DDL for dimensional modeling and final fact table creation. 
+![alt text](snowflake_schema.png)
 
 # Follow Me On
 Linkedin: https://www.linkedin.com/in/alejandro-aboy/ 
