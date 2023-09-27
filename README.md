@@ -6,6 +6,7 @@ You will see different sections:
   - Paid Ads Models (Fivetran, dbt, Snowflake)
   - Weather Pipeline (Mage, PostgreSQL, GCP, Data Studio)
   - Attribution Pipeline (Airflow, PostgreSQL, S3)
+  - Instacart Fact Data Modeling (S3, Snowflake)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)
