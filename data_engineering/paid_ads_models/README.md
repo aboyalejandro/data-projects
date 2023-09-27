@@ -38,7 +38,9 @@ First, after contemplating Fivetran ERDs, I've designed the star models for both
 
 # dbt
 
-Finally, after getting the diagram done, I've started modeling all the tables to get the final results. The sources for this raw data are listed in /sources folder and the /models are as shown below:
+Finally, after getting the diagram done, I've started modeling all the tables to get the final results. Both models have surrogate keys, incremental stategy with one-day batch window, and an example macro to extract the country from a campaign string. 
+
+The sources for this raw data are listed in /sources folder and the /models are as shown below:
 
 ### Google Ads:
 ![alt text](images/google_ads_dbt.png)
