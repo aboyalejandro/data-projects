@@ -16,10 +16,12 @@ In this small project we are getting data from a Kaggle dataset, understanding a
 # dbdiagram
 
 First, after contemplating Fivetran ERDs, I've designed the star models for both cases in dbdiagram.io
+
 ![alt text](instacart_snowflake.png)
 
 # snowflake
 Check .sql files to see the step by step S3 integration, DDL for dimensional modeling and final fact table creation. 
+
 ![alt text](snowflake_schema.png)
 
 # Follow Me On
