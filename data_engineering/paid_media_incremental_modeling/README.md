@@ -3,8 +3,8 @@ Get data at very high level of details: for Facebook Ads, get everything to see 
 
 # Introduction & Goals
 - Using Fivetran to get raw data into Snowflake
-- Adding sources to dbt setup (simplified files, overall repo is not upload)
-- Transformation data inside dbt and send it back to Snowflake
+- Adding sources for dbt setup (simplified files, overall repo is not upload)
+- Data transformation with dbt and send it back to Snowflake
 
 # Contents
 
@@ -40,7 +40,7 @@ Note: some column names might differ from the final dbt model.
 
 # dbt
 
-Finally, after getting the diagram done, I've started modeling all the tables to get the final results. Both models have surrogate keys, incremental stategy with one-day batch window, and an example macro to extract the country from a campaign string. 
+Finally, after getting the diagram done, I've started modeling all the tables to get the final results. Both models have surrogate keys, incremental stategy (because of its huge workload and fact granularity) with one-day batch window, and an example macro to extract the country from a campaign string. 
 
 The sources for this raw data are listed in /sources folder and the /models are as shown below:
 

@@ -3,11 +3,12 @@
 You will see different sections:
 
 - Data Engineering
-  - Paid Ads Models (Fivetran, dbt, Snowflake)
+  - Paid Ads Asset Level Incremental Modeling (Fivetran, dbt, Snowflake)
   - Weather Pipeline (Mage, PostgreSQL, GCP, Data Studio)
   - Attribution Pipeline (Airflow, PostgreSQL, S3)
   - Instacart Fact Data Modeling (S3, Snowflake)
   - No Code ETL (Zapier, Fivetran, dbt, Snowflake)
+  - Paid Ads Campaign Level Modeling (Fivetran, dbt, Snowflake)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)

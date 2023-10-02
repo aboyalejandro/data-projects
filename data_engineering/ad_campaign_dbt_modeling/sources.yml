@@ -1,0 +1,72 @@
+sources: 
+  - name: raw_mkt_historical_gads 
+    database: raw_snowflake
+    schema: raw_mkt_historical_gads
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+        error_after: 
+          count: 36
+          period: hour
+    loaded_at_field: _FIVETRAN_SYNCED 
+    tables:
+      - name: campaign_stats_metrics 
+      - name: account_history 
+  
+  - name: raw_mkt_historical_fb
+    database: raw_snowflake
+    schema: raw_mkt_historical_fb
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+        error_after: 
+          count: 36
+          period: hour
+    loaded_at_field: _FIVETRAN_SYNCED
+    tables:
+      - name: country_per_facebook_campaign
+
+  - name: raw_mkt_historical_li
+    database: raw_snowflake
+    schema: raw_mkt_historical_li
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+        error_after: 
+          count: 36
+          period: hour
+    loaded_at_field: _FIVETRAN_SYNCED
+    tables:
+      - name: campaign_history
+      - name: account_history
+      - name: ad_analytics_by_campaign
+    
+  - name: raw_mkt_historical_tik 
+    database: raw_snowflake
+    schema: raw_mkt_historical_tik
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+        error_after: 
+          count: 36
+          period: hour
+    loaded_at_field: _FIVETRAN_SYNCED
+    tables:
+      - name: advertiser
+      - name: campaign_history
+      - name: campaign_report_daily
+    
+  - name: raw_mkt_historical_bing_ads
+    database: raw_snowflake
+    schema: raw_mkt_historical_bing_ads
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+    loaded_at_field: _FIVETRAN_SYNCED
+    tables:
+      - name: campaign_performance_daily_report 

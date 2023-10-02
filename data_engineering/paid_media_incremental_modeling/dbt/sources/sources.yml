@@ -1,6 +1,6 @@
 sources:
   - name: raw_mkt_historical_gads 
-    database: ironhouse
+    database: raw_snowflake
     schema: raw_mkt_historical_gads 
     tables:
       - name: campaign_history 
@@ -11,7 +11,7 @@ sources:
       - name: ad_history
   
   - name: raw_mkt_historical_fb
-    database: ironhouse
+    database: raw_snowflake
     schema: raw_mkt_historical_fb
     tables:
       - name: country_per_facebook_campaign
