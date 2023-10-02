@@ -7,6 +7,7 @@ You will see different sections:
   - Weather Pipeline (Mage, PostgreSQL, GCP, Data Studio)
   - Attribution Pipeline (Airflow, PostgreSQL, S3)
   - Instacart Fact Data Modeling (S3, Snowflake)
+  - No Code ETL (Zapier, Fivetran, dbt, Snowflake)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)
