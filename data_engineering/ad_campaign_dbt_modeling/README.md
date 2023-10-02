@@ -37,6 +37,7 @@ The sources for staging models are listed in sources.yml
 The dbt project structure is following medallion approach (bronze, silver and gold) with dbt version: staging and marts.
 
 ![alt text](images/lineage.png)
+
 Note: some column names might differ from the final dbt model.
 
 # Follow Me On
