@@ -41,24 +41,24 @@ with salesforce as (select distinct salesforce_lead_id,
 
 select eventbrite.email,
        salesforce_lead_id, 
-	   ticket_date, 
-	   event_date, 
-	   created_date, 
-	   converted_date, 
+       ticket_date, 
+       event_date, 
+       created_date, 
+       converted_date, 
        closed_date,
        organizer,
-	   event_id,
-	   event_name,
-	   country,
-	   city,
-	   affiliate,
+       event_id,
+       event_name,
+       country,
+       city,
+       affiliate,
        channel, 
-	   event_registrations,
+       event_registrations,
        -- checking for email presence inside SF to confirm if there is a lead inside the CRM
-	   COALESCE(CASE WHEN (case when salesforce.email is null then false else true end)::boolean THEN 1 ELSE 0 END,0) as is_in_salesforce,
+       COALESCE(CASE WHEN (case when salesforce.email is null then false else true end)::boolean THEN 1 ELSE 0 END,0) as is_in_salesforce,
        -- generating an unique id for potential incremental models 
        {{ dbt_utils.generate_surrogate_key(['eventbrite.email', 'ticket_date','event_id']) }} as id,
-	   current_timestamp as date_inserted
+       current_timestamp as date_inserted
 from eventbrite 
 left join salesforce 
 	on eventbrite.email = salesforce.email 
