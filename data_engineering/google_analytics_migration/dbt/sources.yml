@@ -1,0 +1,6 @@
+sources: 
+  - name: google_analytics 
+    database: raw_snowflake
+    schema: google_analytics
+    tables:
+      - name: landing_page_conversion

@@ -9,6 +9,7 @@ You will see different sections:
   - Instacart Fact Data Modeling (S3, Snowflake)
   - No Code ETL (Zapier, Fivetran, dbt, Snowflake)
   - Paid Ads Campaign Level Modeling (Fivetran, dbt, Snowflake)
+  - Google Analytics Migration to PiwikPRO (Fivetran, Airflow, dbt, Snowflake)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)
