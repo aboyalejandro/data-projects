@@ -13,8 +13,8 @@ You will see different sections:
 
   
 - Machine Learning
-  - Sales prediction
+  - Sales prediction (Python)
   - NFT performance predictor (Flask)
 - Scraping
-  - Bootcamps scraping and SQL storage
-  - Scraping daily energy prices
+  - Bootcamps scraping and SQL storage (Python, SQL)
+  - Scraping daily energy prices (Python)
