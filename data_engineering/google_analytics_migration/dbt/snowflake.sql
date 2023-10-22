@@ -99,23 +99,6 @@ CREATE OR REPLACE TABLE ANALYTICS (
                 date_inserted STRING
 );
 
-CREATE OR REPLACE TABLE EVENTS (
-                  session_id STRING,
-                  event_id STRING,
-                  visitor_id STRING,
-                  timestamp STRING,
-                  event_index STRING,
-                  page_view_index STRING,
-                  custom_event_category STRING,
-                  custom_event_action STRING,
-                  custom_event_name STRING,
-                  event_url STRING,
-                  source_medium STRING,
-                  campaign_name STRING,
-                  goal_id STRING,
-                  date_inserted STRING
-);
-
 -- COPY STAGES FILES
 
 USE SCHEMA piwik_pro;
@@ -124,16 +107,11 @@ COPY INTO RAW_SNOWFLAKE.piwik_pro.sessions
 FROM @external_stages.piwik_sessions
 FILE_FORMAT = (FORMAT_NAME = RAW_SNOWFLAKE.piwik_pro.CSV);
 
-COPY INTO RAW_SNOWFLAKE.piwik_pro.events
-FROM @external_stages.piwik_events
-FILE_FORMAT = (FORMAT_NAME = RAW_SNOWFLAKE.piwik_pro.CSV);
-
 COPY INTO RAW_SNOWFLAKE.piwik_pro.analytics
 FROM @external_stages.piwik_analytics
 FILE_FORMAT = (FORMAT_NAME = RAW_SNOWFLAKE.piwik_pro.CSV);
 
 SELECT * from RAW_SNOWFLAKE.piwik_pro.sessions;
-SELECT * from RAW_SNOWFLAKE.piwik_pro.events;
 SELECT * from RAW_SNOWFLAKE.piwik_pro.analytics;
 
 -- CREATING PIPES
