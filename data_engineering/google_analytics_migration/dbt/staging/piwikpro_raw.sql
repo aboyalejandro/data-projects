@@ -23,7 +23,7 @@ select
     "goal_conversions__b6b9173b-47a1-446a-8ea6-1bb96249eb37"::int as leads,
      {{ dbt_utils.generate_surrogate_key(['date', 'country','channel_grouping','device_category','landing_page','source_medium','campaign']) }} as id,
     current_timestamp as date_inserted
-from  {{ source('raw_mkt_piwik', 'landing_page_conversion') }}
+from  {{ source('piwik_pro', 'analytics') }}
 {% if is_incremental() %}
   where date > (select max(date) from {{ this }})
 {% endif %}
