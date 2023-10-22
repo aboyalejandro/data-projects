@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_sessions
+    description: Sessions tables from PiwikPRO.
+    columns:
+      - name: session_id
+        tests:
+          - unique
+          - not_null
+        description: This is a unique identifier for a session.
+      - name: visitor_id
+        tests:
+          - not_null
+        description: This is a unique identifier for a visitor.
+
+  - name: stg_events
+    description: Snowpipe events table from PiwikPRO. 
+
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+        description: This is a unique identifier for an event.
+      - name: session_id
+        tests:
+          - not_null
+        description: This is a unique identifier for a session.
+      - name: visitor_id
+        tests:
+          - not_null
+        description: This is a unique identifier for a visitor.
+          
+
+  - name: stg_analytics
+    description: UI extracted API definition table from PiwikPRO.

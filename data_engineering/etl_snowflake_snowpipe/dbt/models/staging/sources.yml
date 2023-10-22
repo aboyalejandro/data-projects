@@ -1,0 +1,13 @@
+sources: 
+  - name: piwik_pro 
+    database: raw_snowflake
+    schema: piwik_pro
+    freshness:
+        warn_after: 
+          count: 24
+          period: hour
+    loaded_at_field: data_inserted 
+    tables:
+      - name: sessions 
+      - name: analytics
+      - name: streaming 
