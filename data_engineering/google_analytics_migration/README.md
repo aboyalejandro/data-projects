@@ -28,10 +28,8 @@ Considering Google Analytics deprecation on July 2023, PiwikPRO appeared as an a
 - Setting up neccesary reports for final model layout.
 
 # Airflow 
-- TODO: Add core of Airflow DAGs
+- PiwikPRO does not have a Fivetran connector at the moment, so the API is directly scraped to get the raw data into Snowflake. In this case, data is being extracted from its 3 APIs: sessions, events and analytics.
 - TODO: Add snowpipe to S3 
-
-- PiwikPRO does not have a Fivetran connector at the moment, so the API is directly scraped to get the raw data into Snowflake.
 
 # dbt
 
