@@ -9,7 +9,7 @@ from airflow.utils.task_group import TaskGroup
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable 
 from airflow.providers.amazon.aws.operators.s3 import S3CreateObjectOperator 
-from piwik_class import Piwik
+from data_engineering.etl_snowflake_snowpipe.dags.piwik_class import Piwik
 from helpers_class import Helpers
 
 PIWIK_CLIENT_ID = Variable.get('PIWIK_CLIENT_ID')
