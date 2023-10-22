@@ -10,6 +10,7 @@ You will see different sections:
   - No Code ETL (Zapier, Fivetran, dbt, Snowflake)
   - Paid Ads Campaign Level Modeling (Fivetran, dbt, Snowflake)
   - Google Analytics Migration to PiwikPRO (Fivetran, Airflow, dbt, Snowflake)
+  - ETL & Snowpipe (Airflow, S3, Snowflake)
 - Machine Learning
   - Sales prediction
   - NFT performance predictor (Flask)
