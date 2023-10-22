@@ -36,6 +36,7 @@ Considering Google Analytics deprecation on July 2023, PiwikPRO appeared as an a
 
 Both staging models have surrogate keys, incremental stategy (because of its huge workload and fact granularity) with one-day batch window. The sources for this raw data are listed in /sources file and the /models are as shown below:
 
+![alt text](images/snowflake.png)
 ![alt text](images/lineage_dbt.png)
 
 Note: some column names might differ from the final dbt model.
