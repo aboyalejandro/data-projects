@@ -4,3 +4,10 @@ sources:
     schema: google_analytics
     tables:
       - name: landing_page_conversion
+  - name: piwikpro 
+    database: raw_snowflake
+    schema: piwik
+    tables:
+      - name: sessions
+      - name: analytics
+      - name: events
