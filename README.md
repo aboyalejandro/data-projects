@@ -18,5 +18,3 @@ You will see different sections:
 - Scraping
   - Bootcamps scraping and SQL storage
   - Scraping daily energy prices
-- Other Projects
-  - Scape Room Project
