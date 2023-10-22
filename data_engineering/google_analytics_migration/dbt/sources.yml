@@ -4,9 +4,9 @@ sources:
     schema: google_analytics
     tables:
       - name: landing_page_conversion
-  - name: piwikpro 
+  - name: piwik_pro 
     database: raw_snowflake
-    schema: piwik
+    schema: piwik_pro
     tables:
       - name: sessions
       - name: analytics
