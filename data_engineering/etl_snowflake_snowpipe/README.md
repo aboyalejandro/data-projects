@@ -25,12 +25,12 @@
 - Used TaskGroups, PythonOperators and S3BucketOperators to manage all the flow. 
 - Applied transformations with pandas.
 
+![alt text](images/airflow.png)
+
 ### TO DO: 
 - handle Snowflake stage creation and "COPY INTO" command through Airflow. 
 - Check if tables exist before pushing data from stage. 
 - Change to parquet instead of csv. 
-
-![alt text](images/airflow.png)
 
 # Snowflake
 
@@ -41,12 +41,12 @@
 
 (Check sql folder for more detail on Snowflake code.)
 
-### TO DO 
-- Use ARN auth instead of keys.
-
 ![alt text](images/stages.png)
 
 ![alt text](images/schema.png)
+
+### TO DO 
+- Use ARN auth instead of keys.
 
 # dbt
 - Followed dbt recommended folder structure, added sources and used macros.
