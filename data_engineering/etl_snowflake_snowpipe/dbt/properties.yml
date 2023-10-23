@@ -1,0 +1,23 @@
+models:
+  - name: stg_events
+    config:
+      elementary:
+        timestamp_column: date_inserted
+    tests:
+      - elementary.table_anomalies
+      - elementary.all_columns_anomalies
+  - name: stg_sessions
+    config:
+      elementary:
+        timestamp_column: date_inserted
+    tests:
+      - elementary.table_anomalies
+      - elementary.all_columns_anomalies
+  - name: stg_analytics
+    config:
+      elementary:
+        timestamp_column: date_inserted
+    tests:
+      - elementary.table_anomalies
+      - elementary.all_columns_anomalies
+      
