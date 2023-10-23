@@ -1,5 +1,4 @@
-# Title
-Building a full ETL process for PiwikPRO (Traffic AnalyticsTool) with Airflow, Snowflake, Snowpipe, Amazon S3 and dbt.
+# Building a full ETL process for PiwikPRO (Traffic AnalyticsTool) with Airflow, Snowflake, Snowpipe, Amazon S3 and dbt.
 
 # Introduction & Goals
 - Capture APIs data with Airflow and send it to S3.
