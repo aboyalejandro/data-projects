@@ -11,7 +11,7 @@ Considering Google Analytics deprecation on July 2023, PiwikPRO appeared as an a
 
 - [Used Tools](#used-tools)
   - [Airflow](#Airflow)
-  - [Fivetran](#fivetran)
+  - [Fivetran](#Fivetran)
   - [dbt & Snowflake](#dbt)
 - [Follow Me On](#follow-me-on)
 
