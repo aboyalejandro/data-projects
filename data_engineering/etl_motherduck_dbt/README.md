@@ -41,12 +41,12 @@
 - Building a visitor SCD model with snapshots.
 
 ![alt text](images/visitor.png)
-Note: screenshots was taken from a dbt cloud implementation for the same model.
+Note: screenshots were taken from a dbt cloud implementation for the same model.
 
 - Building a full funnel attribution history with all the models. 
 
 ![alt text](images/attribution.png)
-Note: screenshots was taken from a dbt cloud implementation for the same model.
+Note: screenshots were taken from a dbt cloud implementation for the same model.
 
 # Follow Me On
 Linkedin: https://www.linkedin.com/in/alejandro-aboy/ 
