@@ -22,13 +22,12 @@
 
 - OOP approach with Classes/methods to capture API raw_data.
 - Used Airflow Variables.
-- Used TaskGroups, PythonOperators and S3BucketOperators to manage all the flow. 
+- Used TaskGroups, PythonOperators, S3BucketOperators, SnowflakeOperators to manage all the flow. 
 - Applied transformations with pandas.
 
 ![alt text](images/airflow.png)
 
 ### TO DO: 
-- handle Snowflake stage creation and "COPY INTO" command through Airflow. 
 - Check if tables exist before pushing data from stage. 
 - Change to parquet instead of csv. 
 
