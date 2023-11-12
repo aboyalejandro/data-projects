@@ -16,7 +16,9 @@ class Piwik:
                  PIWIK_AUTH_URL,
                  PIWIK_ANALYTICS_API,
                  PIWIK_EVENTS_API,
-                 PIWIK_SESSIONS_API):
+                 PIWIK_SESSIONS_API,
+                 PIWIK_REQUEST_LIMIT):
+                # PENDING A FILE_EXTENSION PARAM
         
         self.PIWIK_CLIENT_ID = PIWIK_CLIENT_ID
         self.PIWIK_CLIENT_SECRET = PIWIK_CLIENT_SECRET
@@ -25,6 +27,7 @@ class Piwik:
         self.PIWIK_ANALYTICS_API = PIWIK_ANALYTICS_API
         self.PIWIK_EVENTS_API = PIWIK_EVENTS_API
         self.PIWIK_SESSIONS_API = PIWIK_SESSIONS_API
+        self.PIWIK_REQUEST_LIMIT = PIWIK_REQUEST_LIMIT
 
     def auth(self,**kwargs):
         url = f'{self.PIWIK_AUTH_URL}'
@@ -55,67 +58,30 @@ class Piwik:
             "date_to": kwargs.get('ds'),
             "website_id": f'{self.PIWIK_WEBSITE_ID}',
             "offset": 0,
-            "limit": 10000,
+            "limit": f'{self.PIWIK_REQUEST_LIMIT}',
             "columns": [
                 {
                 "transformation_id": "to_date",
                 "column_id": "timestamp"
                 },
-                {
-                    
-                    "column_id": "referrer_type"
-                },
-                {
-                    "column_id": "source_medium"
-                },
-                {
-                    "column_id": "campaign_name"
-                },
-                {
-                    "column_id": "campaign_content"
-                },
-                {
-                    "column_id": "session_entry_url"
-                },
-                {
-                    "column_id": "visitor_returning"
-                },
-                {
-                    "column_id": "location_country_name"
-                },
-                {
-                    "column_id": "operating_system"
-                },
-                {
-                    "column_id": "device_type"
-                },
-                {
-                    "column_id": "events"
-                },
-                {
-                    "column_id": "visitors"
-                },
-                {
-                    "column_id": "sessions"
-                },
-                {
-                    "column_id": "page_views"
-                },
-                {
-                    "column_id": "ecommerce_conversions"
-                },
-                {
-                    "column_id": "cart_additions"
-                },
-                {
-                    "column_id": "ecommerce_abandoned_carts"
-                },
-                {
-                    "column_id": "consents_none"
-                },
-                {
-                    "column_id": "consents_full"
-                }
+                {"column_id": "referrer_type"},
+                {"column_id": "source_medium"},
+                {"column_id": "campaign_name"},
+                {"column_id": "campaign_content"},
+                {"column_id": "session_entry_url"},
+                {"column_id": "visitor_returning"},
+                {"column_id": "location_country_name"},
+                {"column_id": "operating_system"},
+                {"column_id": "device_type"},
+                {"column_id": "events"},
+                {"column_id": "visitors"},
+                {"column_id": "sessions"},
+                {"column_id": "page_views"},
+                {"column_id": "ecommerce_conversions"},
+                {"column_id": "cart_additions"},
+                {"column_id": "ecommerce_abandoned_carts"},
+                {"column_id": "consents_none"},
+                {"column_id": "consents_full"}
             ]
             })
             headers = {
@@ -151,7 +117,7 @@ class Piwik:
                     "conditions": []
                 },
                 "offset": 0,
-                "limit": 10000,
+                "limit": f'{self.PIWIK_REQUEST_LIMIT}',
                 "format": "json"
                 })
             headers = {
@@ -170,33 +136,15 @@ class Piwik:
             payload = json.dumps({
                 "website_id": f'{self.PIWIK_WEBSITE_ID}',
                 "columns": [
-                    {
-                    "column_id": "visitor_session_number"
-                    },
-                    {
-                    "column_id": "visitor_returning"
-                    },
-                    {
-                    "column_id": "source_medium" #could apply channel definition logics here to have the "session"
-                    },
-                    {
-                    "column_id": "campaign_name"
-                    },
-                    {
-                    "column_id": "session_total_page_views"
-                    },
-                    {
-                    "column_id": "session_total_events"
-                    },
-                    {
-                    "column_id": "visitor_days_since_last_session"
-                    },
-                    {
-                    "column_id": "visitor_days_since_first_session"
-                    },
-                    {
-                    "column_id": "location_country_name"
-                    },
+                    {"column_id": "visitor_session_number"},
+                    {"column_id": "visitor_returning"},
+                    {"column_id": "source_medium"},
+                    {"column_id": "campaign_name"},
+                    {"column_id": "session_total_page_views"},
+                    {"column_id": "session_total_events"},
+                    {"column_id": "visitor_days_since_last_session"},
+                    {"column_id": "visitor_days_since_first_session"},
+                    {"column_id": "location_country_name"},
                 ],
                 "date_from": kwargs.get('ds'),
                     "date_to": kwargs.get('ds'),
@@ -205,7 +153,7 @@ class Piwik:
                     "conditions": []
                 },
                 "offset": 0,
-                "limit": 10000,
+                "limit": f'{self.PIWIK_REQUEST_LIMIT}',
                 "format": "json"
                 })
             headers = {
@@ -264,6 +212,4 @@ class Piwik:
                 if data.shape[0] > 0:
                     return 'Dataframe has values.'
                 else: 
-                    return 'Empty dataframe.'
-
-    
+                    return 'Empty dataframe.' 
