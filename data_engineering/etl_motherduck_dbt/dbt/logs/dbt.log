@@ -1,0 +1,242 @@
+[0m10:09:13.147576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105466550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106545dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106545fa0>]}
+
+
+============================== 10:09:13.155896 | adaf0315-5423-4296-86b6-4fc7909f8279 ==============================
+[0m10:09:13.155896 [info ] [MainThread]: Running with dbt=1.9.1
+[0m10:09:13.156366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m10:09:13.260345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'adaf0315-5423-4296-86b6-4fc7909f8279', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106545130>]}
+[0m10:09:13.273895 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-0lznr1e4'
+[0m10:09:13.274314 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:09:13.392936 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:09:13.393469 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m10:09:13.455174 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m10:09:13.455913 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m10:09:13.456292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'adaf0315-5423-4296-86b6-4fc7909f8279', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066d0be0>]}
+[0m10:09:13.461298 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:09:13.499584 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:09:13.502814 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m10:09:13.590126 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m10:09:13.649422 [info ] [MainThread]: Updating lock file in file path: /Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/package-lock.yml
+[0m10:09:13.695543 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-f1czzzzm'
+[0m10:09:13.702056 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m10:09:14.502537 [info ] [MainThread]: Installed from version 0.10.0
+[0m10:09:14.502900 [info ] [MainThread]: Updated version available: 0.10.4
+[0m10:09:14.504019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'adaf0315-5423-4296-86b6-4fc7909f8279', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e9fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e9e80>]}
+[0m10:09:14.504474 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:09:15.071298 [info ] [MainThread]: Installed from version 1.1.1
+[0m10:09:15.071632 [info ] [MainThread]: Updated version available: 1.3.0
+[0m10:09:15.071864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'adaf0315-5423-4296-86b6-4fc7909f8279', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057abb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e9550>]}
+[0m10:09:15.072122 [info ] [MainThread]: Installing calogica/dbt_date
+[0m10:09:15.376110 [info ] [MainThread]: Installed from version 0.10.1
+[0m10:09:15.376410 [info ] [MainThread]: Up to date!
+[0m10:09:15.376640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'adaf0315-5423-4296-86b6-4fc7909f8279', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e9eb0>]}
+[0m10:09:15.377196 [info ] [MainThread]: 
+[0m10:09:15.377576 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m10:09:15.379373 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.3899677, "process_in_blocks": "0", "process_kernel_time": 0.294488, "process_mem_max_rss": "97337344", "process_out_blocks": "0", "process_user_time": 1.246682}
+[0m10:09:15.379767 [debug] [MainThread]: Command `cli deps` succeeded at 10:09:15.379684 after 2.39 seconds
+[0m10:09:15.380018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105466550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044145b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066053a0>]}
+[0m10:09:15.380263 [debug] [MainThread]: Flushing usage events
+[0m10:09:15.755945 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:56:59.469971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a08e5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0a0c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0a1290>]}
+
+
+============================== 09:56:59.473223 | 80002df8-a23c-4faf-8580-def18bc30b02 ==============================
+[0m09:56:59.473223 [info ] [MainThread]: Running with dbt=1.6.0
+[0m09:56:59.473882 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'version_check': 'True', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:56:59.496518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '80002df8-a23c-4faf-8580-def18bc30b02', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a08e810>]}
+[0m09:56:59.497481 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-mmx83cgz'
+[0m09:56:59.497808 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m09:56:59.594469 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m09:56:59.594958 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m09:56:59.652971 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m09:56:59.654464 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m09:56:59.654714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '80002df8-a23c-4faf-8580-def18bc30b02', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0a10d0>]}
+[0m09:56:59.656132 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m09:56:59.687187 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m09:56:59.689542 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m09:56:59.746962 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m09:56:59.752320 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m09:57:00.370700 [info ] [MainThread]: Installed from version 0.10.0
+[0m09:57:00.371028 [info ] [MainThread]: Updated version available: 0.10.4
+[0m09:57:00.371363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '80002df8-a23c-4faf-8580-def18bc30b02', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0c93d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0e1c10>]}
+[0m09:57:00.371589 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m09:57:00.766827 [info ] [MainThread]: Installed from version 1.1.1
+[0m09:57:00.767115 [info ] [MainThread]: Updated version available: 1.3.0
+[0m09:57:00.767603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '80002df8-a23c-4faf-8580-def18bc30b02', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0c93d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0dbd50>]}
+[0m09:57:00.767967 [info ] [MainThread]: Installing calogica/dbt_date
+[0m09:57:01.022523 [info ] [MainThread]: Installed from version 0.10.1
+[0m09:57:01.022865 [info ] [MainThread]: Up to date!
+[0m09:57:01.023067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '80002df8-a23c-4faf-8580-def18bc30b02', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x128610150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12a0dad10>]}
+[0m09:57:01.023273 [info ] [MainThread]: 
+[0m09:57:01.023421 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m09:57:01.024299 [debug] [MainThread]: Command `cli deps` succeeded at 09:57:01.024236 after 1.58 seconds
+[0m09:57:01.024487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x129305fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ed3e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ed3dd0>]}
+[0m09:57:01.024663 [debug] [MainThread]: Flushing usage events
+[0m23:51:22.000359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10748ff50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074a0e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074a1490>]}
+
+
+============================== 23:51:22.003135 | 64565451-9465-4550-b550-c68a469edb97 ==============================
+[0m23:51:22.003135 [info ] [MainThread]: Running with dbt=1.6.0
+[0m23:51:22.003466 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:51:22.024496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '64565451-9465-4550-b550-c68a469edb97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068fd890>]}
+[0m23:51:22.025705 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-ovtw2fda'
+[0m23:51:22.026123 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m23:51:22.252129 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m23:51:22.253048 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m23:51:22.313761 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m23:51:22.314401 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m23:51:22.314617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '64565451-9465-4550-b550-c68a469edb97', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074e3350>]}
+[0m23:51:22.316020 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m23:51:22.382371 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m23:51:22.384711 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m23:51:22.474360 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m23:51:22.479788 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m23:51:23.093419 [info ] [MainThread]: Installed from version 0.10.0
+[0m23:51:23.093674 [info ] [MainThread]: Updated version available: 0.10.4
+[0m23:51:23.093907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '64565451-9465-4550-b550-c68a469edb97', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074957d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074ca650>]}
+[0m23:51:23.094187 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m23:51:23.492741 [info ] [MainThread]: Installed from version 1.1.1
+[0m23:51:23.493011 [info ] [MainThread]: Updated version available: 1.3.0
+[0m23:51:23.493253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '64565451-9465-4550-b550-c68a469edb97', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074c8e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107487d90>]}
+[0m23:51:23.493576 [info ] [MainThread]: Installing calogica/dbt_date
+[0m23:51:23.775772 [info ] [MainThread]: Installed from version 0.10.1
+[0m23:51:23.776053 [info ] [MainThread]: Up to date!
+[0m23:51:23.776376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '64565451-9465-4550-b550-c68a469edb97', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074957d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10753bb50>]}
+[0m23:51:23.776693 [info ] [MainThread]: 
+[0m23:51:23.776888 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m23:51:23.777765 [debug] [MainThread]: Command `cli deps` succeeded at 23:51:23.777698 after 1.80 seconds
+[0m23:51:23.777974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f51910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10238bf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10238bd90>]}
+[0m23:51:23.778165 [debug] [MainThread]: Flushing usage events
+[0m20:07:11.570916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126885e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1268a1010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1268a1650>]}
+
+
+============================== 20:07:11.575396 | a2cecdf6-d23c-4660-8e2f-74729ee68d94 ==============================
+[0m20:07:11.575396 [info ] [MainThread]: Running with dbt=1.6.0
+[0m20:07:11.575975 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:07:11.599386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a2cecdf6-d23c-4660-8e2f-74729ee68d94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x123fc7310>]}
+[0m20:07:11.600487 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-iuwws6b7'
+[0m20:07:11.600831 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m20:07:11.737846 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m20:07:11.738362 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m20:07:11.790663 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m20:07:11.791461 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m20:07:11.791742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a2cecdf6-d23c-4660-8e2f-74729ee68d94', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12612ea10>]}
+[0m20:07:11.793153 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m20:07:11.827258 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m20:07:11.829465 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m20:07:11.889177 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m20:07:11.895172 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m20:07:12.480235 [info ] [MainThread]: Installed from version 0.10.0
+[0m20:07:12.480514 [info ] [MainThread]: Updated version available: 0.10.4
+[0m20:07:12.480953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a2cecdf6-d23c-4660-8e2f-74729ee68d94', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1224882d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1268a21d0>]}
+[0m20:07:12.481213 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m20:07:12.893575 [info ] [MainThread]: Installed from version 1.1.1
+[0m20:07:12.893878 [info ] [MainThread]: Updated version available: 1.3.0
+[0m20:07:12.894608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a2cecdf6-d23c-4660-8e2f-74729ee68d94', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1268a5b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126894550>]}
+[0m20:07:12.895086 [info ] [MainThread]: Installing calogica/dbt_date
+[0m20:07:13.171822 [info ] [MainThread]: Installed from version 0.10.1
+[0m20:07:13.172118 [info ] [MainThread]: Up to date!
+[0m20:07:13.172421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a2cecdf6-d23c-4660-8e2f-74729ee68d94', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1268cb690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1224882d0>]}
+[0m20:07:13.172667 [info ] [MainThread]: 
+[0m20:07:13.172823 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m20:07:13.173857 [debug] [MainThread]: Command `cli deps` succeeded at 20:07:13.173790 after 1.62 seconds
+[0m20:07:13.174052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105288950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051bfdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051bfe50>]}
+[0m20:07:13.174222 [debug] [MainThread]: Flushing usage events
+[0m00:11:17.146472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110cc6e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110cc6220>]}
+
+
+============================== 00:11:17.150675 | 5ce25a48-e19b-4c43-b1ec-c279c98ece48 ==============================
+[0m00:11:17.150675 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:11:17.151095 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m00:11:17.640290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ce25a48-e19b-4c43-b1ec-c279c98ece48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c86a30>]}
+[0m00:11:17.836705 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-jtfjphzp'
+[0m00:11:17.837686 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m00:11:18.082925 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m00:11:18.086735 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m00:11:18.130005 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m00:11:18.133415 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m00:11:18.134482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '5ce25a48-e19b-4c43-b1ec-c279c98ece48', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e690a0>]}
+[0m00:11:18.142421 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m00:11:18.183706 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m00:11:18.188556 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m00:11:18.225451 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m00:11:18.231021 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m00:11:19.062581 [info ] [MainThread]: Installed from version 0.10.0
+[0m00:11:19.062909 [info ] [MainThread]: Updated version available: 0.10.4
+[0m00:11:19.063248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '5ce25a48-e19b-4c43-b1ec-c279c98ece48', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d58940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d58100>]}
+[0m00:11:19.063643 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m00:11:19.576834 [info ] [MainThread]: Installed from version 1.1.1
+[0m00:11:19.578304 [info ] [MainThread]: Updated version available: 1.3.0
+[0m00:11:19.579828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '5ce25a48-e19b-4c43-b1ec-c279c98ece48', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d58940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e69040>]}
+[0m00:11:19.580163 [info ] [MainThread]: Installing calogica/dbt_date
+[0m00:11:19.971675 [info ] [MainThread]: Installed from version 0.10.1
+[0m00:11:19.972296 [info ] [MainThread]: Up to date!
+[0m00:11:19.972792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '5ce25a48-e19b-4c43-b1ec-c279c98ece48', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e69c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e69760>]}
+[0m00:11:19.975869 [info ] [MainThread]: 
+[0m00:11:19.976167 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m00:11:19.981563 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.9776266, "process_in_blocks": "0", "process_kernel_time": 0.275478, "process_mem_max_rss": "98140160", "process_out_blocks": "0", "process_user_time": 1.155121}
+[0m00:11:19.982009 [debug] [MainThread]: Command `cli deps` succeeded at 00:11:19.981932 after 2.98 seconds
+[0m00:11:19.982268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b3f4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110d58100>]}
+[0m00:11:19.982569 [debug] [MainThread]: Flushing usage events
+[0m00:11:20.390852 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:11:50.884856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119295b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b07e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b071f0>]}
+
+
+============================== 00:11:50.888552 | 40ae5399-adb7-4e26-8610-ef834511a8e8 ==============================
+[0m00:11:50.888552 [info ] [MainThread]: Running with dbt=1.9.1
+[0m00:11:50.888946 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/alejandroaboy/Desktop/wip-repos/data-case-projects/data_engineering/etl_motherduck_dbt/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:11:51.014567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '40ae5399-adb7-4e26-8610-ef834511a8e8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c7df70>]}
+[0m00:11:51.149855 [debug] [MainThread]: Set downloads directory='/var/folders/67/cphn2wq14gz2x5k1nw4bk9c00000gn/T/dbt-downloads-i341e6ka'
+[0m00:11:51.150585 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m00:11:51.207516 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m00:11:51.208978 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m00:11:51.252172 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m00:11:51.254243 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m00:11:51.255308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '40ae5399-adb7-4e26-8610-ef834511a8e8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112fac0a0>]}
+[0m00:11:51.257693 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m00:11:51.292075 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m00:11:51.295464 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m00:11:51.366061 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m00:11:51.368462 [info ] [MainThread]: Installing calogica/dbt_expectations
+[0m00:11:51.972674 [info ] [MainThread]: Installed from version 0.10.0
+[0m00:11:51.973032 [info ] [MainThread]: Updated version available: 0.10.4
+[0m00:11:51.973300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '40ae5399-adb7-4e26-8610-ef834511a8e8', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b98bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b98970>]}
+[0m00:11:51.973703 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m00:11:52.356717 [info ] [MainThread]: Installed from version 1.1.1
+[0m00:11:52.357056 [info ] [MainThread]: Updated version available: 1.3.0
+[0m00:11:52.357305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '40ae5399-adb7-4e26-8610-ef834511a8e8', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b98bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112fac820>]}
+[0m00:11:52.357879 [info ] [MainThread]: Installing calogica/dbt_date
+[0m00:11:52.643746 [info ] [MainThread]: Installed from version 0.10.1
+[0m00:11:52.644742 [info ] [MainThread]: Up to date!
+[0m00:11:52.645165 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '40ae5399-adb7-4e26-8610-ef834511a8e8', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112facb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112fac670>]}
+[0m00:11:52.645548 [info ] [MainThread]: 
+[0m00:11:52.645801 [info ] [MainThread]: Updates available for packages: ['calogica/dbt_expectations', 'dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m00:11:52.648113 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.8343315, "process_in_blocks": "0", "process_kernel_time": 0.253481, "process_mem_max_rss": "99516416", "process_out_blocks": "0", "process_user_time": 1.149655}
+[0m00:11:52.648483 [debug] [MainThread]: Command `cli deps` succeeded at 00:11:52.648407 after 1.83 seconds
+[0m00:11:52.648726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119295b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108d35e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112b98970>]}
+[0m00:11:52.648967 [debug] [MainThread]: Flushing usage events
+[0m00:11:53.109993 [debug] [MainThread]: An error was encountered while trying to flush usage events
